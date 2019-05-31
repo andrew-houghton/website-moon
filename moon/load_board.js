@@ -4,7 +4,8 @@ function reset_board() {
 	l = myClasses.length;
 
 	for (i; i < l; i++) {
-	    myClasses[i].style.display = 'block';
+		myClasses[i].classList.add('m-fadeIn');
+		myClasses[i].classList.remove('m-fadeOut');
 	}
 }
 
@@ -14,7 +15,8 @@ function clear_board() {
 	l = myClasses.length;
 
 	for (i; i < l; i++) {
-	    myClasses[i].style.display = 'none';
+		myClasses[i].classList.add('m-fadeOut');
+		myClasses[i].classList.remove('m-fadeIn');
 	}
 }
 
@@ -41,6 +43,7 @@ function load_board() {
 	for (var i = holds.length - 1; i >= 0; i--) {
 		var desired_class = "col_"+holds[i][0]+" row_"+holds[i][1];
 		var hold = document.getElementsByClassName(desired_class)[0];
-	    hold.style.display = 'block';
+		hold.classList.add('m-fadeIn');
+		hold.classList.remove('m-fadeOut');
 	}
 }

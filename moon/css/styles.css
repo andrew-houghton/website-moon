@@ -20,6 +20,18 @@
 	left: -20px;
 }
 
+.button-container {
+    width: 650px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+input {
+  height: 40px;
+  font-size: 16px;
+}
+
 .rot_N {
 	transform: rotate(0deg);
 }

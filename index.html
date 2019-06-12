@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Moon Board Climb Generator</title> 
+	<script type="text/javascript" src="moon/climbs/2016.js"></script>
 	<link rel="stylesheet" href="moon/css/styles.css">
 	<script type="text/javascript" src="moon/js/csi.min.js"></script>
 	<script type="text/javascript" src="moon/js/load_board.js"></script>
@@ -11,15 +12,18 @@
 <body>
 <h1>Moon Board Climb Generator</h1>
 <div class="button-container">
-	<input type="button" value="Load LSTM 2016 Climbs" onclick="load_climbs()">
+	<label><input type="radio" name="year"><span>2016</span></label>
+	<label><input type="radio" name="year"><span>2017</span></label>
+</div>
+<div class="button-container">
 	<input type="button" value="Next" onclick="random_climb()">
 	<input type="button" value="Reset" onclick="reset_board()">
-	<input type="button" value="Clear" onclick="clear_board()">
 </div>
 <div class="background-image">
 	<div class="grid-container ">
 		<div data-include="/moon/layouts/2016.html"></div>
 	</div>
 </div>
+<div id="grade-container"></div>
 </body>
 </html>

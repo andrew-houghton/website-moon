@@ -20,58 +20,32 @@ function clear_board() {
 	}
 }
 
-var getJSON = function(url, callback) {
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', url, true);
-		xhr.responseType = 'json';
-		xhr.onload = function() {
-			var status = xhr.status;
-			if (status === 200) {
-				callback(null, xhr.response);
-			} else {
-				callback(status, xhr.response);
-			}
-		};
-		xhr.send();
-};
-
-
-function load_climbs() {
-	getJSON('/moon/climbs/lstm_2016.json',
-	function(err, data) {
-		if (err !== null) {
-			alert('Can\'t load climb data: ' + err);
-		} else {
-			holds = data
-		}
-	});
+function random_climb() {
+	var index = Math.floor(Math.random() * holds.original.length)
+	display(holds.original[index].moves)
+	display_grades(holds.original[index].grade)
 }
 
-holds = [[
-	["A", "18"],
-	["A", "11"],
-	["B", "8"],
-	["C", "13"],
-	["C", "10"],
-	["D", "15"],
-	["E", "13"],
-	["E", "11"],
-	["F", "8"],
-	["F", "5"],
-	["G", "13"],
-	["H", "10"],
-	["H", "5"],
-	["I", "8"],
-]]
-
-function random_climb() {
+function display(moves) {
 	clear_board();
-	var climb = holds[Math.floor(Math.random() * holds.length)]
-
-	for (var i = climb.length - 1; i >= 0; i--) {
-		var desired_class = "col_"+climb[i][0]+" row_"+climb[i][1];
-		var hold = document.getElementsByClassName(desired_class)[0];
+	for (var i = moves.length - 1; i >= 0; i--) {
+		var hold = document.getElementsByClassName(moves[i])[0];
 		hold.classList.add('m-fadeIn');
 		hold.classList.remove('m-fadeOut');
 	}
+}
+
+function display_grades(grades) {
+	console.log(grades)
+	var container = document.getElementById("grade-container");
+	while (container.firstChild) {
+		container.removeChild(container.firstChild);
+	}
+
+	for (var algorithm in grades){
+		console.log("wow")
+        var text = document.createElement('p');
+        text.append(algorithm + " " + grades[algorithm]);
+        container.append(text);
+      }
 }

@@ -2,38 +2,38 @@ var holds = {
   "original": [
     {
       "grade": {
-        "original": "8A",
-        "randomForest": "7A+",
-        "xgboost": "7B+"
+        "original": "6A",
+        "randomForest": "6A+",
+        "xgboost": "6A-"
       },
       "moves": [
-        "G2",
-        "J7",
-        "J8",
-        "D8",
-        "D10",
-        "A5",
-        "A13",
-        "F6",
-        "D16",
-        "C18"
+        "A2",
+        "A4",
+        "A6",
+        "A8",
+        "A10",
+        "A12",
+        "A14",
+        "A16",
+        "A18"
       ]
     },
     {
       "grade": {
         "original": "7C",
         "randomForest": "7C+",
-        "xgboost": "7B+"
+        "xgboost": "7C-"
       },
       "moves": [
+        "B2",
         "B4",
-        "D5",
-        "G2",
-        "C7",
-        "E9",
-        "E12",
-        "E14",
-        "E18"
+        "B6",
+        "B8",
+        "B10",
+        "B12",
+        "B14",
+        "B16",
+        "B18"
       ]
     }
   ],
@@ -41,37 +41,37 @@ var holds = {
     {
       "grade": {
         "original": "8A",
-        "randomForest": "7A+",
-        "xgboost": "7B+"
+        "randomForest": "8A+",
+        "xgboost": "8A-"
       },
       "moves": [
-        "G2",
-        "J7",
-        "J8",
-        "D8",
-        "D10",
-        "A5",
-        "A13",
-        "F6",
-        "D16",
+        "C2",
+        "C4",
+        "C6",
+        "C8",
+        "C10",
+        "C12",
+        "C14",
+        "C16",
         "C18"
       ]
     },
     {
       "grade": {
-        "original": "7C",
-        "randomForest": "7C+",
-        "xgboost": "7B+"
+        "original": "9B",
+        "randomForest": "9B+",
+        "xgboost": "9B-"
       },
       "moves": [
-        "B4",
-        "D5",
-        "G2",
-        "C7",
-        "E9",
-        "E12",
-        "E14",
-        "E18"
+        "D2",
+        "D4",
+        "D6",
+        "D8",
+        "D10",
+        "D12",
+        "D14",
+        "D16",
+        "D18"
       ]
     }
   ]

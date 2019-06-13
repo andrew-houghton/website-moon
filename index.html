@@ -19,11 +19,13 @@
 	<input type="button" value="Reset" onclick="reset_board()">
 </div>
 <div>
+	<b>Moon board year:</b>
 	<label><input type="radio" name="year" value="2016" onclick="updateHoldset()" checked><span>2016</span></label>
 	<label><input type="radio" name="year" value="2017" onclick="updateHoldset()"><span>2017</span></label>
 </div>
 <div>
-	<label><input type="radio" name="model" value="original" checked><span>Original</span></label>
+	<b>Climb generation algorithm:</b>
+	<label><input type="radio" name="model" value="original" checked><span>Handmade</span></label>
 	<label><input type="radio" name="model" value="lstm"><span>LSTM</span></label>
 </div>
 <div id="grade-container"></div>

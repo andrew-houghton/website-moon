@@ -2,8 +2,10 @@ function updateHoldset() {
     var selected_year = document.querySelector('input[name="year"]:checked').value;
     if (selected_year == "2016") {
         holds = holds_2016
+        climbs = climbs_2016
     } else {
         holds = holds_2017
+        climbs = climbs_2017
     }
 
     var container = document.getElementById("moon-board");
@@ -25,5 +27,6 @@ function updateHoldset() {
 
         container.append(div)
     }
+    reset_board()
 }
 window.onload = updateHoldset;

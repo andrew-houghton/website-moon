@@ -25,9 +25,9 @@ function clear_board() {
 
 function random_climb() {
 	var model = document.querySelector('input[name="model"]:checked').value;
-	var index = Math.floor(Math.random() * holds[model].length)
-	display(holds[model][index].moves)
-	display_grades(holds[model][index].grade)
+	var index = Math.floor(Math.random() * climbs[model].length)
+	display(climbs[model][index].moves)
+	display_grades(climbs[model][index].grade)
 }
 
 function display(moves) {

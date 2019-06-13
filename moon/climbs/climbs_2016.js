@@ -1,4 +1,4 @@
-var holds = {
+var climbs = {
   "original": [
     {
       "grade": {

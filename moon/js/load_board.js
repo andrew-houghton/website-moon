@@ -1,7 +1,5 @@
-
-// Swap board
-
 function reset_board() {
+	clear_contents_grade()
 	var myClasses = document.querySelectorAll('.hold'),
 	i = 0,
 	l = myClasses.length;
@@ -13,6 +11,7 @@ function reset_board() {
 }
 
 function clear_board() {
+	clear_contents_grade()
 	var myClasses = document.querySelectorAll('.hold'),
 	i = 0,
 	l = myClasses.length;
@@ -41,14 +40,19 @@ function display(moves) {
 	}
 }
 
-function display_grades(grades) {
+function clear_contents_grade(container) {
 	var container = document.getElementById("grade-container");
 	while (container.firstChild) {
 		container.removeChild(container.firstChild);
 	}
+}
 
+function display_grades(grades) {
+	clear_contents_grade()
+	
+	var container = document.getElementById("grade-container");
 	for (var algorithm in grades){
-        var text = document.createElement('p');
+        var text = document.createElement('div');
         text.append(algorithm + " " + grades[algorithm]);
         container.append(text);
       }

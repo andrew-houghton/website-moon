@@ -1,3 +1,9 @@
+function clear_contents(container) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
 function updateHoldset() {
     var selected_year = document.querySelector('input[name="year"]:checked').value;
     if (selected_year == "2016") {
@@ -9,10 +15,8 @@ function updateHoldset() {
     }
 
     var container = document.getElementById("moon-board");
-
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
+    clear_contents(container)
+    clear_contents(document.getElementById("grade-container"))
     
     for (i = 0; i < holds.length; i++) { 
         var div = document.createElement('div');

@@ -5,6 +5,7 @@
 	<title>Moon Board Climb Generator</title> 
 	<link rel="stylesheet" href="moon/css/layout.css">
 	<link rel="stylesheet" href="moon/css/hold.css">
+	<link rel="stylesheet" href="moon/css/grade_label.css">
 	<script type="text/javascript" src="moon/climbs/2016.js"></script>
 	<script type="text/javascript" src="moon/climbs/2017.js"></script>
 	<script type="text/javascript" src="moon/layouts/holds_2016.js"></script>
@@ -29,7 +30,13 @@
 	<label><input type="radio" name="model" value="original" checked><span>Handmade</span></label>
 	<label><input type="radio" name="model" value="lstm"><span>LSTM</span></label>
 </div>
+
 <div id="grade-container"></div>
+
+<div class="meter">
+  <span style="width: 25%"></span>
+</div>
+
 <div class="background-image">
 	<div class="grid-container" id="moon-board">
 	</div>
